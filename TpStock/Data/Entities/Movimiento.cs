@@ -11,7 +11,7 @@ namespace TpStock.Data.Entities
         public string Name { get; set; }
         public ICollection<Gerente> Gerentes { get; set; }   = new List<Gerente>();
         public ICollection<Vendedor> Vendedores { get; set; } = new List<Vendedor>();
-        public ICollection<EncargadoStock> EncargadoStock { get; } = new HashSet<EncargadoStock>();
+        public ICollection<EncargadoStock> EncargadoStock { get; } = new List<EncargadoStock>();
 
 
     }
