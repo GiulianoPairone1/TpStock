@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\TpStock\\src\\Web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\tpstock\\src\\web\\infrastructure\\data\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BFFB7B5-26FF-4143-8EC5-81A18EBE3FB1}|Domain\\Domain.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\tpstock\\src\\web\\domain\\entities\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BFFB7B5-26FF-4143-8EC5-81A18EBE3FB1}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RepositoryBase.cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\TpStock\\src\\Web\\Infrastructure\\Data\\RepositoryBase.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\RepositoryBase.cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\TpStock\\src\\Web\\Infrastructure\\Data\\RepositoryBase.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\RepositoryBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T04:53:13.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\TpStock\\src\\Web\\Domain\\Entities\\Producto.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Producto.cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\TpStock\\src\\Web\\Domain\\Entities\\Producto.cs",
+              "RelativeToolTip": "Domain\\Entities\\Producto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T22:18:27.528Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
