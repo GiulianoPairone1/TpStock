@@ -1,12 +1,14 @@
 ﻿using Domain.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace Domain.Entities
 {
-    abstract class User
+    public abstract class User
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
@@ -25,6 +27,8 @@ namespace Domain.Entities
 
         [Required]
         public RollUser Roll {  get; set; }
+
+        public bool Active { get; set; }
 
     }
 }

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +12,7 @@ namespace Domain.Entities
     public class Product
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
@@ -17,7 +20,7 @@ namespace Domain.Entities
         public string Brand { get; set; }
 
         [Required]
-        public string Classification { get; set; }
+        public ClassificationProduct Classification { get; set; }
 
         [Required]
         public string Description { get; set; }
@@ -27,6 +30,11 @@ namespace Domain.Entities
 
         [Required]
         public bool Active { get; set; }
+
+        public Product()
+        {
+
+        }
 
     }
 }

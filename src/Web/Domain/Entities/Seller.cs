@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    internal class Seller : User
+    public class Seller : User
     {
+
     }
 }
