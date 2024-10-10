@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241001221124_InitialMIgration")]
-    partial class InitialMIgration
+    [Migration("20241009051928_Stock")]
+    partial class Stock
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,9 +31,6 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Brand")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("Classification")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
                         .IsRequired()

@@ -20,9 +20,6 @@ namespace Domain.Entities
         public string Brand { get; set; }
 
         [Required]
-        public ClassificationProduct Classification { get; set; }
-
-        [Required]
         public string Description { get; set; }
 
         [Required]
@@ -35,6 +32,5 @@ namespace Domain.Entities
         {
 
         }
-
     }
 }

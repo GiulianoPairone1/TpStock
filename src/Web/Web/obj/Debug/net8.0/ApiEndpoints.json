@@ -18,8 +18,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "product",
-        "Type": "Domain.Entities.Product",
+        "Name": "productDto",
+        "Type": "Application.Models.ProductDTO",
         "IsRequired": true
       }
     ],

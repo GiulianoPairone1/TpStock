@@ -19,14 +19,41 @@ namespace Application.Services
             _productRepository = productRepository;
         }
 
-        public Product Add(Product product)
+        public ProductDTO Add(ProductDTO productDto)
         {
-            return _productRepository.add(product);
+            var product = new Product
+            {
+                Name = productDto.Name,
+                Brand = productDto.Brand,
+                Description = productDto.Description,
+                Price = productDto.Price,
+                Active = productDto.Active,
+            };
+
+            var addProduct= _productRepository.add(product);
+
+            return new ProductDTO
+            {
+                Name = addProduct.Name,
+                Brand = addProduct.Brand,
+                Description = addProduct.Description,
+                Price = addProduct.Price,
+                Active = addProduct.Active
+            };
+
         }
 
-        public List<Product> GetAll()
+        public List<ProductDTO> GetAll()
         {
-            return _productRepository.GetAll();
+            return _productRepository.GetAll()
+                .Select(product => new ProductDTO
+                {
+                    Name = product.Name,
+                    Brand = product.Brand,
+                    Description = product.Description,
+                    Price = product.Price,
+                    Active = product.Active
+                }).ToList();
         }
 
     }

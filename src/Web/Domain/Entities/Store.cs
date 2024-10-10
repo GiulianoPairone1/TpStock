@@ -6,7 +6,6 @@ namespace Domain.Entities
 {
     public class Store
     {
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -25,5 +24,6 @@ namespace Domain.Entities
 
         [Required]
         public string City { get; set; }
+
     }
 }

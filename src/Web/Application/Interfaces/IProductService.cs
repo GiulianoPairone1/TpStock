@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Application.Models;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Application.Interfaces
 {
     public interface IProductService
     {
-        Product Add(Product product);
-        List<Product> GetAll();
+        ProductDTO Add(ProductDTO productDto);
+        List<ProductDTO> GetAll();
     }
 }

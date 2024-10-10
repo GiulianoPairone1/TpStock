@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces;
+using Application.Models;
 using Application.Services;
 using Domain.Entities;
 using Microsoft.AspNetCore.Http;
@@ -32,9 +33,15 @@ namespace Web.Controllers
 
 
         [HttpPost]
-        public IActionResult Add([FromBody] Product product)
+        public IActionResult Add([FromBody] ProductDTO productDto)
         {
-            return Ok(_productService.Add(product));
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var addedProduct = _productService.Add(productDto);
+            return Ok(addedProduct);
         }
 
     }
