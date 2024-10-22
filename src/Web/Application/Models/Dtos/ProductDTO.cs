@@ -9,6 +9,7 @@ namespace Application.Models.Dtos
         public string Description { get; set; }
         public double Price { get; set; }
         public bool Active { get; set; }
+        public int TotalQuantity { get; set; }
 
         public Product ToProduct()
         {

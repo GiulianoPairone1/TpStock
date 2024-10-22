@@ -1,5 +1,4 @@
-﻿using Domain.Enums;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
@@ -14,9 +13,6 @@ namespace Domain.Entities
         public string Name { get; set; }
 
         [Required]
-        public TypeStore TypeStorare { get; set; }
-
-        [Required]
         public string Description { get; set; }
 
         [Required]
@@ -24,6 +20,12 @@ namespace Domain.Entities
 
         [Required]
         public string City { get; set; }
+        public ICollection<ProductStore> ProductStores { get; set; }
+
+        public Store()
+        {
+            ProductStores=new List<ProductStore>();
+        }
 
     }
 }

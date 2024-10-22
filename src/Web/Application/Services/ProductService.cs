@@ -38,12 +38,16 @@ namespace Application.Services
                 return null; 
             }
 
+            var totalQuantity = _productRepository.GetTotalQuantity(product.Id);
+
             return new ProductDTO
             {
                 Name = product.Name,
                 Brand = product.Brand,
                 Description = product.Description,
-                Price = product.Price
+                Price = product.Price,
+                Active = product.Active,
+                TotalQuantity = totalQuantity
             };
         }
 

@@ -1,5 +1,4 @@
-﻿using Domain.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -27,8 +26,10 @@ namespace Domain.Entities
 
         [Required]
         public bool Active { get; set; }
+        public ICollection<ProductStore> ProductStores { get; set; }
         public Product()
         {
+            ProductStores = new List<ProductStore>();
         }
     }
 }

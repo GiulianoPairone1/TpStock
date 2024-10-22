@@ -11,3 +11,16 @@ C:\Users\giuliano\Desktop\UtnPractica\TpStock\TpStock\src\Web\Domain\obj\Debug\n
 C:\Users\giuliano\Desktop\UtnPractica\TpStock\TpStock\src\Web\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\giuliano\Desktop\UtnPractica\TpStock\TpStock\src\Web\Domain\obj\Debug\net8.0\ref\Domain.dll
 C:\Users\giuliano\Desktop\UtnPractica\TpStock\TpStock\src\Web\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Domain\obj\Debug\net8.0\ref\Domain.dll

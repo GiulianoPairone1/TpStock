@@ -9,5 +9,6 @@ namespace Domain.Interfaces
 {
     public interface IProductRepository:IRepositoryBase<Product>
     {
+        int GetTotalQuantity(int productId);
     }
 }

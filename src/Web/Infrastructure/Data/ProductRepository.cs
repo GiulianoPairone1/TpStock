@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,20 @@ namespace Infrastructure.Data
         public ProductRepository (ApplicationDbContext context):base(context)
         {
             _context = context;
+        }
+
+        public override List<Product> GetAll()
+        {
+            return _context.Products
+                .Include(p => p.ProductStores)
+                .ToList();
+        }
+
+        public int GetTotalQuantity(int productId)
+        {
+            return _context.ProductStores
+                .Where(ps => ps.ProductId == productId)
+                .Sum(ps => ps.Quantity);
         }
     }
 }

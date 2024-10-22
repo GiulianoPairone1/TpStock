@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZBzDjq3DzaY=",
+  "dgSpecHash": "KGUEZF/noLw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\TpStock\\src\\Web\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\giuliano\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\giuliano\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",

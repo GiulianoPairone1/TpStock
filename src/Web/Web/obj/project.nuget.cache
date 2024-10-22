@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cs7WIEKabIo=",
+  "dgSpecHash": "RZENIuL9nqA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\TpStock\\src\\Web\\Web\\Web.csproj",
+  "projectFilePath": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Web\\Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\giuliano\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\giuliano\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.8\\microsoft.aspnetcore.authentication.jwtbearer.8.0.8.nupkg.sha512",
