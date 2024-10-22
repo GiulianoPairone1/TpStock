@@ -31,6 +31,19 @@ namespace Web.Controllers
             return Ok(products);
         }
 
+        [HttpGet("GetByName")]
+        public IActionResult GetByName([FromQuery] string name)
+        {
+            var product = _productService.GetByName(name);
+
+            if (product == null)
+            {
+                return NotFound("No se encontró el producto");
+            }
+
+            return Ok(product);
+        }
+
 
         [HttpPost]
         public IActionResult Add([FromBody] ProductDTO productDto)

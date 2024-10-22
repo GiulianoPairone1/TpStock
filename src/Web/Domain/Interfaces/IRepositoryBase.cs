@@ -9,7 +9,7 @@ namespace Domain.Interfaces
     public interface IRepositoryBase<T> where T : class
     {
         List<T> GetAll();
-        List<T> FindByCondition(Func<T, bool> condition);
+        T FindByCondition(Func<T, bool> condition);
         T add(T entity);
         T update(T entity);
     }

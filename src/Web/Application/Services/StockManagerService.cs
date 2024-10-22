@@ -28,16 +28,21 @@ namespace Application.Services
                 }).ToList();
         }
 
-        public List<StockManagerDTO> GetByName(string name)
+        public StockManagerDTO GetByName(string name)
         {
-            var stockmanagers = _stockManagerRepository.FindByCondition(s => s.Name.Contains(name) && s.Active)
-                .Select(stockmanager => new StockManagerDTO
-                {
-                    Name = stockmanager.Name,
-                    UserName = stockmanager.UserName,
-                    Email = stockmanager.Email,
-                }).ToList();
-            return stockmanagers;
+            var stockmanager = _stockManagerRepository.FindByCondition(p => p.Name == name && p.Active);
+
+            if (stockmanager == null)
+            {
+                return null;
+            }
+
+            return new StockManagerDTO
+            {
+                Name = stockmanager.Name,
+                UserName = stockmanager.UserName,
+                Email = stockmanager.Email,
+            };
         }
 
         public StockManagerDTO Create(StockManagerDTO stockmanagerdto)

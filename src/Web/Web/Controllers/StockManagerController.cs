@@ -24,15 +24,18 @@ namespace Web.Controllers
             return Ok(stockmanagers);
         }
 
+
         [HttpGet("GetByName")]
         public IActionResult GetByName([FromQuery] string name)
         {
-            var stockmanagers = _stockManagerService.GetByName(name);
-            if (stockmanagers == null || stockmanagers.Count() == 0)
+            var stockmanager = _stockManagerService.GetByName(name);
+
+            if (stockmanager == null)
             {
-                return NotFound("No se encontro un encargado de stock con este nombre");
+                return NotFound("No se encontro al gerente");
             }
-            return Ok(stockmanagers);
+
+            return Ok(stockmanager);
         }
 
         [HttpPost]

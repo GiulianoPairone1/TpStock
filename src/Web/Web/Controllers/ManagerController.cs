@@ -26,12 +26,14 @@ namespace Web.Controllers
         [HttpGet("GetByName")]
         public IActionResult GetByName([FromQuery] string name)
         {
-            var managers = _managerservice.GetByName(name);
-            if (managers == null || managers.Count() == 0)
+            var manager = _managerservice.GetByName(name);
+
+            if (manager == null)
             {
-                return NotFound("No se encontro Gerente con ese Nombre");
+                return NotFound("No se encontro al gerente");
             }
-            return Ok(managers);
+
+            return Ok(manager);
         }
 
         [HttpPost]

@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Application.Models.Dtos;
+using Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,15 +24,18 @@ namespace Web.Controllers
             return Ok(sellers);
         }
 
+
         [HttpGet("GetByName")]
         public IActionResult GetByName([FromQuery] string name)
         {
-            var sellers=_sellerService.GetByName(name);
-            if(sellers== null ||  sellers.Count()==0)
+            var seller = _sellerService.GetByName(name);
+
+            if (seller == null)
             {
-                return NotFound("No se encontraron vendedores activos con este nombre");
+                return NotFound("No se encontro al vendedor");
             }
-            return Ok(sellers);
+
+            return Ok(seller);
         }
 
         [HttpPost]

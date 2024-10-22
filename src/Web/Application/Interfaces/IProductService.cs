@@ -10,7 +10,8 @@ namespace Application.Interfaces
 {
     public interface IProductService
     {
-        ProductDTO Create(ProductDTO productDto);
         List<ProductDTO> GetAll();
+        ProductDTO GetByName(string name);
+        ProductDTO Create(ProductDTO productDto);
     }
 }

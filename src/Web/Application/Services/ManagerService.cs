@@ -29,16 +29,21 @@ namespace Application.Services
                 }).ToList();
         }
 
-        public List<ManagerDTO> GetByName(string name)
+        public ManagerDTO GetByName(string name)
         {
-            var managers = _managerRepository.FindByCondition(s => s.Name.Contains(name) && s.Active)
-                .Select(manager => new ManagerDTO
-                {
-                    Name = manager.Name,
-                    UserName = manager.UserName,
-                    Email = manager.Email,
-                }).ToList();
-            return managers;
+            var manager = _managerRepository.FindByCondition(p => p.Name == name && p.Active);
+
+            if (manager == null)
+            {
+                return null;
+            }
+
+            return new ManagerDTO
+            {
+                Name = manager.Name,
+                UserName = manager.UserName,
+                Email = manager.Email,
+            };
         }
 
         public ManagerDTO Create(ManagerDTO managerdto)

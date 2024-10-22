@@ -20,11 +20,11 @@ namespace Infrastructure.Data
         {
             return _context.Set<T>().ToList();
         }
-
-        public List<T> FindByCondition(Func<T,bool> condition)
+        public T FindByCondition(Func<T, bool> condition)
         {
-            return _context.Set<T>().Where(condition).ToList();
+            return _context.Set<T>().FirstOrDefault(condition);
         }
+
 
         public T add(T entity)
         {

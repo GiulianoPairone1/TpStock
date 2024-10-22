@@ -11,7 +11,7 @@ namespace Application.Interfaces
     public interface IManagerService
     {
         List<ManagerDTO> GetAll();
-        List<ManagerDTO> GetByName(string name);
+        ManagerDTO GetByName(string name);
         ManagerDTO Create(ManagerDTO managerdto);
         ManagerDTO Update(ManagerDTO managerdto);
         void Delete(string userName);

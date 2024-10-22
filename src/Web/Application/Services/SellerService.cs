@@ -30,16 +30,21 @@ namespace Application.Services
                 })
                 .ToList();
         }
-        public List<SellerDTO> GetByName(string name)
+        public SellerDTO GetByName(string name)
         {
-            var sellers= _sellerrepository.FindByCondition(s=>s.Name.Contains(name) && s.Active)
-                .Select(seller=> new SellerDTO
-                {
-                    Name = seller.Name,
-                    UserName = seller.UserName,
-                    Email = seller.Email
-                }).ToList();
-            return sellers;
+            var seller = _sellerrepository.FindByCondition(p => p.Name == name && p.Active);
+
+            if (seller == null)
+            {
+                return null;
+            }
+
+            return new SellerDTO
+            {
+                Name = seller.Name,
+                UserName = seller.UserName,
+                Email = seller.Email,
+            };
         }
         public SellerDTO Create(SellerDTO sellerDto)
         {

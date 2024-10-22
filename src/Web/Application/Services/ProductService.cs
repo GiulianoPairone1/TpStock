@@ -19,30 +19,6 @@ namespace Application.Services
             _productRepository = productRepository;
         }
 
-        public ProductDTO Create(ProductDTO productDto)
-        {
-            var product = new Product
-            {
-                Name = productDto.Name,
-                Brand = productDto.Brand,
-                Description = productDto.Description,
-                Price = productDto.Price,
-                Active = productDto.Active,
-            };
-
-            var addProduct= _productRepository.add(product);
-
-            return new ProductDTO
-            {
-                Name = addProduct.Name,
-                Brand = addProduct.Brand,
-                Description = addProduct.Description,
-                Price = addProduct.Price,
-                Active = addProduct.Active
-            };
-
-        }
-
         public List<ProductDTO> GetAll()
         {
             return _productRepository.GetAll()
@@ -50,10 +26,32 @@ namespace Application.Services
                 {
                     Name = product.Name,
                     Brand = product.Brand,
-                    Description = product.Description,
-                    Price = product.Price,
-                    Active = product.Active
                 }).ToList();
+        }
+
+        public ProductDTO GetByName(string name)
+        {
+            var product = _productRepository.FindByCondition(p => p.Name == name && p.Active);
+
+            if (product == null)
+            {
+                return null; 
+            }
+
+            return new ProductDTO
+            {
+                Name = product.Name,
+                Brand = product.Brand,
+                Description = product.Description,
+                Price = product.Price
+            };
+        }
+
+        public ProductDTO Create(ProductDTO productDto)
+        {
+            var product = productDto.ToProduct();
+            var addedProduct = _productRepository.add(product);
+            return ProductDTO.FromProduct(addedProduct);
         }
 
     }
