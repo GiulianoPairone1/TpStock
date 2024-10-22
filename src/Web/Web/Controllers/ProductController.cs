@@ -1,5 +1,5 @@
 ﻿using Application.Interfaces;
-using Application.Models;
+using Application.Models.Dtos;
 using Application.Services;
 using Domain.Entities;
 using Microsoft.AspNetCore.Http;
@@ -40,7 +40,7 @@ namespace Web.Controllers
                 return BadRequest(ModelState);
             }
 
-            var addedProduct = _productService.Add(productDto);
+            var addedProduct = _productService.Create(productDto);
             return Ok(addedProduct);
         }
 

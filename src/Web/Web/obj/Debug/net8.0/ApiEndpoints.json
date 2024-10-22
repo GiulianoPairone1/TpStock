@@ -1,5 +1,79 @@
 [
   {
+    "ContainingType": "Web.Controllers.ManagerController",
+    "Method": "Get",
+    "RelativePath": "api/Manager",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ManagerController",
+    "Method": "Add",
+    "RelativePath": "api/Manager",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "managerDTO",
+        "Type": "Application.Models.Dtos.ManagerDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ManagerController",
+    "Method": "Update",
+    "RelativePath": "api/Manager",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "managerDTO",
+        "Type": "Application.Models.Dtos.ManagerDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ManagerController",
+    "Method": "Delete",
+    "RelativePath": "api/Manager/{userName}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ManagerController",
+    "Method": "GetByName",
+    "RelativePath": "api/Manager/GetByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web.Controllers.ProductController",
     "Method": "GetAll",
     "RelativePath": "api/Product",
@@ -19,8 +93,156 @@
     "Parameters": [
       {
         "Name": "productDto",
-        "Type": "Application.Models.ProductDTO",
+        "Type": "Application.Models.Dtos.ProductDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.SellerController",
+    "Method": "Get",
+    "RelativePath": "api/Seller",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.SellerController",
+    "Method": "Add",
+    "RelativePath": "api/Seller",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sellerdto",
+        "Type": "Application.Models.Dtos.SellerDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.SellerController",
+    "Method": "Update",
+    "RelativePath": "api/Seller",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sellerDto",
+        "Type": "Application.Models.Dtos.SellerDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.SellerController",
+    "Method": "Delete",
+    "RelativePath": "api/Seller/{userName}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.SellerController",
+    "Method": "GetByName",
+    "RelativePath": "api/Seller/GetByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.StockManagerController",
+    "Method": "Get",
+    "RelativePath": "api/StockManager",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.StockManagerController",
+    "Method": "Add",
+    "RelativePath": "api/StockManager",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "stockManagerDTO",
+        "Type": "Application.Models.Dtos.StockManagerDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.StockManagerController",
+    "Method": "Update",
+    "RelativePath": "api/StockManager",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "stockManagerDTO",
+        "Type": "Application.Models.Dtos.StockManagerDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.StockManagerController",
+    "Method": "Delete",
+    "RelativePath": "api/StockManager/{userName}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.StockManagerController",
+    "Method": "GetByName",
+    "RelativePath": "api/StockManager/GetByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

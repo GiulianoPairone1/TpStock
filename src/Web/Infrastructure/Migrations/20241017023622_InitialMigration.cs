@@ -5,7 +5,7 @@
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Stock : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -55,7 +55,6 @@ namespace Infrastructure.Migrations
                     Email = table.Column<string>(type: "TEXT", nullable: false),
                     UserName = table.Column<string>(type: "TEXT", nullable: false),
                     Password = table.Column<string>(type: "TEXT", nullable: false),
-                    Roll = table.Column<int>(type: "INTEGER", nullable: false),
                     Active = table.Column<bool>(type: "INTEGER", nullable: false),
                     Discriminator = table.Column<string>(type: "TEXT", maxLength: 13, nullable: false)
                 },

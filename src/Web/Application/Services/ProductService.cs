@@ -1,5 +1,5 @@
 ﻿using Application.Interfaces;
-using Application.Models;
+using Application.Models.Dtos;
 using Domain.Entities;
 using Domain.Interfaces;
 using System;
@@ -19,7 +19,7 @@ namespace Application.Services
             _productRepository = productRepository;
         }
 
-        public ProductDTO Add(ProductDTO productDto)
+        public ProductDTO Create(ProductDTO productDto)
         {
             var product = new Product
             {

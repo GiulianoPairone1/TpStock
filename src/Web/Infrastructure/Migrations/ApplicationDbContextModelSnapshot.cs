@@ -101,9 +101,6 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Roll")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("TEXT");

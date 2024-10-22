@@ -12,10 +12,10 @@ namespace Infrastructure.Data
         public DbSet<StockManager> Stocks { get; set; }
         public DbSet<Store> stores { get; set; }
 
-
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 
         }
+
     }
 }

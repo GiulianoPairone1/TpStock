@@ -14,17 +14,17 @@ namespace Domain.Entities
 
         [Required]
         public string Surname { get; set; }
-
+        
+        [Required]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Required]
         public string UserName { get; set; }
-        
-        [Required]
-        public string Password { get; set; }
 
         [Required]
-        public RollUser Roll {  get; set; }
+        [MinLength(6)]
+        public string Password { get; set; }
 
         public bool Active { get; set; }
 

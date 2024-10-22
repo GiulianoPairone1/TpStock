@@ -18,10 +18,17 @@ builder.Services.AddSwaggerGen();
 
 //Repository
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ISellerRepository, SellerRepository>();
+builder.Services.AddScoped<IManagerRepository, ManagerRepository>();
+builder.Services.AddScoped<IStockManagerRepository, StockManagerRepository>();
 
 
 //Services
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ISellerService, SellerService>();
+builder.Services.AddScoped<IManagerService, ManagerService>();
+builder.Services.AddScoped<IStockManagerService, StockManagerService>();
+
 
 var app = builder.Build();
 

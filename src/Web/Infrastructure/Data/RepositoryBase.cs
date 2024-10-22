@@ -21,6 +21,11 @@ namespace Infrastructure.Data
             return _context.Set<T>().ToList();
         }
 
+        public List<T> FindByCondition(Func<T,bool> condition)
+        {
+            return _context.Set<T>().Where(condition).ToList();
+        }
+
         public T add(T entity)
         {
             _context.Set<T>().Add(entity);
@@ -28,5 +33,13 @@ namespace Infrastructure.Data
             return entity;
         }
 
+        public T update(T entity)
+        {
+            _context.Set<T>().Update(entity);
+            _context.SaveChanges();
+            return entity;
+        }
+
+     
     }
 }

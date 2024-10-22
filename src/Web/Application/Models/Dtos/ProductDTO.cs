@@ -1,7 +1,4 @@
-﻿
-using Domain.Enums;
-
-namespace Application.Models
+﻿namespace Application.Models.Dtos
 {
     public class ProductDTO
     {

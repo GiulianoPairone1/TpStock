@@ -27,10 +27,8 @@ namespace Domain.Entities
 
         [Required]
         public bool Active { get; set; }
-
         public Product()
         {
-
         }
     }
 }
