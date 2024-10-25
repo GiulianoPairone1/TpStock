@@ -9,5 +9,6 @@ namespace Domain.Entities
 {
     public class StockManager : User
     {
+
     }
 }

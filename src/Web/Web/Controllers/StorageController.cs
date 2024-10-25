@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Application.Models.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class StoreController : ControllerBase
     {
         private readonly IStoreService _storeService;
@@ -17,6 +19,7 @@ namespace Web.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Manager,StockManager")]
         public IActionResult GetAll()
         {
             var stores = _storeService.GetAll();
@@ -29,6 +32,7 @@ namespace Web.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Manager")]
         public IActionResult Add([FromBody] StoreDTO storeDto)
         {
             if (!ModelState.IsValid)
@@ -41,6 +45,7 @@ namespace Web.Controllers
         }
 
         [HttpPost("{storeId}/products/{productId}/add")]
+        [Authorize(Roles = "Manager,StockManager")]
         public IActionResult AddProductToStore(int storeId, int productId, [FromQuery] int quantity)
         {
             if (quantity <= 0)

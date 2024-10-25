@@ -284,3 +284,4 @@ C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Web\obj\Debug\net8.0\refin
 C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Web\obj\Debug\net8.0\Web.pdb
 C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Web\obj\Debug\net8.0\Web.genruntimeconfig.cache
 C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Web\obj\Debug\net8.0\ref\Web.dll
+C:\Users\giuliano\Desktop\UtnPractica\TpStock\src\Web\Web\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll

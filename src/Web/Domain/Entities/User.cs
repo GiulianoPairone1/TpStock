@@ -27,5 +27,7 @@ namespace Domain.Entities
 
         public bool Active { get; set; }
 
+        [Required]
+        public string Role { get; set; }
     }
 }

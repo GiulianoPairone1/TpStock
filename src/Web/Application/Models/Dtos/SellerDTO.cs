@@ -23,7 +23,8 @@ namespace Application.Models.Dtos
                 Email = this.Email,
                 UserName = this.UserName,
                 Password = this.Password,
-                Active = this.Active
+                Active = this.Active,
+                Role = "Seller"
             };
         }
 

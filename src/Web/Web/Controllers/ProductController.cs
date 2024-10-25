@@ -2,6 +2,7 @@
 using Application.Models.Dtos;
 using Application.Services;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -46,6 +47,7 @@ namespace Web.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = "Manager,StockManager")]
         public IActionResult Add([FromBody] ProductDTO productDto)
         {
             if (!ModelState.IsValid)

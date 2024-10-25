@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
 using Application.Models.Dtos;
 using Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class StockManagerController : ControllerBase
     {
         private readonly IStockManagerService _stockManagerService;
@@ -26,6 +28,7 @@ namespace Web.Controllers
 
 
         [HttpGet("GetByName")]
+        [Authorize(Roles = "Manager")]
         public IActionResult GetByName([FromQuery] string name)
         {
             var stockmanager = _stockManagerService.GetByName(name);
@@ -39,6 +42,7 @@ namespace Web.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Manager")]
         public IActionResult Add([FromBody] StockManagerDTO stockManagerDTO)
         {
             if (!ModelState.IsValid)
@@ -50,6 +54,7 @@ namespace Web.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Manager,StockManager")]
         public IActionResult Update([FromBody] StockManagerDTO stockManagerDTO)
         {
             if (!ModelState.IsValid)
@@ -69,6 +74,7 @@ namespace Web.Controllers
         }
 
         [HttpDelete("{userName}")]
+        [Authorize(Roles = "Manager")]
         public IActionResult Delete(string userName)
         {
             try

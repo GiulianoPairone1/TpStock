@@ -27,6 +27,7 @@ namespace Application.Models.Dtos
                 UserName = this.UserName,
                 Password = this.Password,
                 Active = this.Active,
+                Role = "Manager"
             };
         }
 

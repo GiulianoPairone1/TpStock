@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
 using Application.Models.Dtos;
 using Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ManagerController : ControllerBase
     {
         private readonly IManagerService _managerservice;
@@ -37,6 +39,7 @@ namespace Web.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Manager")]
         public IActionResult Add([FromBody] ManagerDTO managerDTO)
         {
             if (!ModelState.IsValid)
@@ -48,6 +51,7 @@ namespace Web.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Manager")]
         public IActionResult Update([FromBody] ManagerDTO managerDTO)
         {
             if (!ModelState.IsValid)
@@ -67,6 +71,7 @@ namespace Web.Controllers
         }
 
         [HttpDelete("{userName}")]
+        [Authorize(Roles = "Manager")]
         public IActionResult Delete(string userName)
         {
             try
