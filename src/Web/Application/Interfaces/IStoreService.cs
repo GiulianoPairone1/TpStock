@@ -12,7 +12,6 @@ namespace Application.Interfaces
         List<StoreDTO> GetAll();
         StoreDTO GetById(int id);
         StoreDTO Create(StoreDTO storeDto);
-        void Update(StoreDTO storeDto);
         void AddProductToStore(int productId, int storeId, int quantity);
         int GetProductQuantityInStore(int productId, int storeId);
     }

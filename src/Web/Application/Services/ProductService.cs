@@ -51,6 +51,12 @@ namespace Application.Services
             };
         }
 
+        public List<ProductDTO> GetAllByBrand(string brand)
+        {
+            var products = _productRepository.FindAllByCondition(p => p.Brand == brand && p.Active);
+
+            return products.Select(ProductDTO.FromProduct).ToList();
+        }
         public ProductDTO Create(ProductDTO productDto)
         {
             var product = productDto.ToProduct();
@@ -58,5 +64,24 @@ namespace Application.Services
             return ProductDTO.FromProduct(addedProduct);
         }
 
+        public void Update(ProductDTO productDto)
+        {
+            var product = _productRepository.FindByCondition(p => p.Name == productDto.Name);
+            if (product != null)
+            {
+                productDto.UpdateProduct(product); 
+                _productRepository.update(product); 
+            }
+        }
+
+        public void Delete(string productName) 
+        {
+            var product = _productRepository.FindByCondition(p => p.Name == productName); 
+            if (product != null)
+            {
+                product.Active = false; 
+                _productRepository.update(product); 
+            }
+        }
     }
 }

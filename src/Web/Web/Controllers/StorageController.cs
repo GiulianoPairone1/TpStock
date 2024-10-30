@@ -8,7 +8,6 @@ namespace Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class StoreController : ControllerBase
     {
         private readonly IStoreService _storeService;

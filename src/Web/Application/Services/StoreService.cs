@@ -45,15 +45,7 @@ namespace Application.Services
             return StoreDTO.FromStore(addedStore);
         }
 
-        public void Update(StoreDTO storeDto)
-        {
-            var store = _storeRepository.FindByCondition(s => s.Name == storeDto.Name);
-            if (store != null)
-            {
-                storeDto.UpdateStore(store);
-                _storeRepository.update(store);
-            }
-        }
+
         public void AddProductToStore(int productId, int storeId, int quantity)
         {
             var store = _storeRepository.FindByCondition(s => s.Id == storeId);

@@ -9,7 +9,6 @@ namespace Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class ManagerController : ControllerBase
     {
         private readonly IManagerService _managerservice;

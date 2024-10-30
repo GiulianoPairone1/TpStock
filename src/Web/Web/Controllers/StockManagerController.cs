@@ -9,7 +9,6 @@ namespace Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class StockManagerController : ControllerBase
     {
         private readonly IStockManagerService _stockManagerService;

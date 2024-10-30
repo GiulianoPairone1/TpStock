@@ -31,5 +31,10 @@ namespace Infrastructure.Data
                 .Where(ps => ps.ProductId == productId)
                 .Sum(ps => ps.Quantity);
         }
+
+        public List<Product> FindAllByCondition(Func<Product, bool> condition)
+        {
+            return _context.Products.Where(condition).ToList();
+        }
     }
 }

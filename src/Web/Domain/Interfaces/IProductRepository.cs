@@ -10,5 +10,7 @@ namespace Domain.Interfaces
     public interface IProductRepository:IRepositoryBase<Product>
     {
         int GetTotalQuantity(int productId);
+        List<Product> FindAllByCondition(Func<Product, bool> condition);
+
     }
 }

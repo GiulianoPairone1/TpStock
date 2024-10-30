@@ -127,6 +127,54 @@
   },
   {
     "ContainingType": "Web.Controllers.ProductController",
+    "Method": "Update",
+    "RelativePath": "api/Product",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productDto",
+        "Type": "Application.Models.Dtos.ProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ProductController",
+    "Method": "Delete",
+    "RelativePath": "api/Product/{productName}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ProductController",
+    "Method": "GetAllByBrand",
+    "RelativePath": "api/Product/GetAllByBrand",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brand",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ProductController",
     "Method": "GetByName",
     "RelativePath": "api/Product/GetByName",
     "HttpMethod": "GET",
