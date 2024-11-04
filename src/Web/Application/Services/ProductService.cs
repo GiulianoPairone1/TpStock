@@ -19,6 +19,7 @@ namespace Application.Services
             _productRepository = productRepository;
         }
 
+
         public List<ProductDTO> GetAll()
         {
             return _productRepository.GetAll()
@@ -26,6 +27,7 @@ namespace Application.Services
                 {
                     Name = product.Name,
                     Brand = product.Brand,
+                    Active = product.Active,
                 }).ToList();
         }
 
@@ -57,14 +59,14 @@ namespace Application.Services
 
             return products.Select(ProductDTO.FromProduct).ToList();
         }
-        public ProductDTO Create(ProductDTO productDto)
+        public CreateProductDTO Create(CreateProductDTO productDto)
         {
             var product = productDto.ToProduct();
             var addedProduct = _productRepository.add(product);
-            return ProductDTO.FromProduct(addedProduct);
+            return CreateProductDTO.FromProduct(addedProduct);
         }
 
-        public void Update(ProductDTO productDto)
+        public void Update(CreateProductDTO productDto)
         {
             var product = _productRepository.FindByCondition(p => p.Name == productDto.Name);
             if (product != null)

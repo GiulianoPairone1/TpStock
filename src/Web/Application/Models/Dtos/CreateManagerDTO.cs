@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Models.Dtos
 {
-    public class ManagerDTO
+    public class CreateManagerDTO
     {
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -41,9 +41,9 @@ namespace Application.Models.Dtos
             manager.Active = this.Active;
         }
 
-        public static ManagerDTO FromManager(Manager manger)
+        public static CreateManagerDTO FromManager(Manager manger)
         {
-            return new ManagerDTO
+            return new CreateManagerDTO
             {
                 Name = manger.Name,
                 Surname = manger.Surname,

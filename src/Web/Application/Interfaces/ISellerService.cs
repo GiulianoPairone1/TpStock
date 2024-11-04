@@ -9,10 +9,10 @@ namespace Application.Interfaces
 {
     public interface ISellerService
     {
-        SellerDTO Create(SellerDTO sellerdto);
-        SellerDTO GetByName(string name);
-        List<SellerDTO> GetAll();
-        SellerDTO Update(SellerDTO sellerDTO);
+        CreateSellerDTO Create(CreateSellerDTO sellerdto);
+        CreateSellerDTO GetByName(string name);
+        List<CreateSellerDTO> GetAll();
+        CreateSellerDTO Update(CreateSellerDTO sellerDTO);
         void Delete(string userName);
     }
 }

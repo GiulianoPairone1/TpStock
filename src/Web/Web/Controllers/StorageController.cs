@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Application.Models.Dtos;
+using Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,9 +31,9 @@ namespace Web.Controllers
             return Ok(stores);
         }
 
-        [HttpPost]
+        [HttpPost("Name")]
         [Authorize(Roles = "Manager")]
-        public IActionResult Add([FromBody] StoreDTO storeDto)
+        public IActionResult Add([FromBody] CreateStoreDTO storeDto)
         {
             if (!ModelState.IsValid)
             {
@@ -43,17 +44,17 @@ namespace Web.Controllers
             return Ok(addedStore);
         }
 
-        [HttpPut("Update/{name}")]
+        [HttpPut]
         [Authorize(Roles = "Manager,StockManager")]
-        public IActionResult UpdateByName(string name, [FromBody] StoreDTO storeDto)
+        public IActionResult UpdateByName([FromBody] CreateStoreDTO storeDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            _storeService.UpdateStoreByName(name, storeDto);
-            return Ok($"Almacén '{name}' actualizado con éxito.");
+            _storeService.Update(storeDto);
+            return Ok($"Almacén actualizado con éxito.");
         }
 
         [HttpDelete("Desactive/{name}")]

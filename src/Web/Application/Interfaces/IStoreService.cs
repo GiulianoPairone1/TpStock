@@ -9,10 +9,10 @@ namespace Application.Interfaces
 {
     public interface IStoreService
     {
-        List<StoreDTO> GetAll();
-        StoreDTO GetById(int id);
-        StoreDTO Create(StoreDTO storeDto);
-        void UpdateStoreByName(string name, StoreDTO storeDto);
+        List<CreateStoreDTO> GetAll();
+        CreateStoreDTO GetById(int id);
+        CreateStoreDTO Create(CreateStoreDTO storeDto);
+        void Update(CreateStoreDTO storeDto);
         void DesactivateStoreByName(string name);
     }
 }

@@ -32,7 +32,7 @@ namespace Web.Controllers
             return Ok(products);
         }
 
-        [HttpGet]
+        [HttpGet("GetByName")]
         public IActionResult GetByName([FromQuery] string name)
         {
             var product = _productService.GetByName(name);
@@ -60,7 +60,7 @@ namespace Web.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Manager,StockManager")]
-        public IActionResult Add([FromBody] ProductDTO productDto)
+        public IActionResult Add([FromBody] CreateProductDTO productDto)
         {
             if (!ModelState.IsValid)
             {
@@ -73,16 +73,23 @@ namespace Web.Controllers
 
         [HttpPut]
         [Authorize(Roles = "Manager,StockManager")]
-        public IActionResult Update([FromBody] ProductDTO productDto)
+        public IActionResult Update([FromBody] CreateProductDTO productDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
+            var existingProduct = _productService.GetByName(productDto.Name);
+            if (existingProduct == null)
+            {
+                return NotFound($"No se encontró el producto con el nombre '{productDto.Name}'.");
+            }
+
             _productService.Update(productDto);
-            return Ok("Producto actualizado con éxito");
+            return Ok("Producto actualizado con éxito.");
         }
+
 
         [HttpDelete("{productName}")]
         [Authorize(Roles = "Manager")]

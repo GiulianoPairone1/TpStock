@@ -19,10 +19,10 @@ namespace Application.Services
             _sellerrepository = sellerrepository;
         }
 
-        public List<SellerDTO> GetAll()
+        public List<CreateSellerDTO> GetAll()
         {
             return _sellerrepository.GetAll()
-                .Select(seller => new SellerDTO
+                .Select(seller => new CreateSellerDTO
                 {
                     Name = seller.Name,
                     UserName = seller.UserName,
@@ -30,7 +30,7 @@ namespace Application.Services
                 })
                 .ToList();
         }
-        public SellerDTO GetByName(string name)
+        public CreateSellerDTO GetByName(string name)
         {
             var seller = _sellerrepository.FindByCondition(p => p.Name == name && p.Active);
 
@@ -39,20 +39,20 @@ namespace Application.Services
                 return null;
             }
 
-            return new SellerDTO
+            return new CreateSellerDTO
             {
                 Name = seller.Name,
                 UserName = seller.UserName,
                 Email = seller.Email,
             };
         }
-        public SellerDTO Create(SellerDTO sellerDto)
+        public CreateSellerDTO Create(CreateSellerDTO sellerDto)
         {
             var seller = sellerDto.Toseller();
             var addedSeller= _sellerrepository.add(seller);
-            return SellerDTO.FromSeller(addedSeller);
+            return CreateSellerDTO.FromSeller(addedSeller);
         }
-        public SellerDTO Update(SellerDTO sellerDTO)
+        public CreateSellerDTO Update(CreateSellerDTO sellerDTO)
         {
             var SearchSeller = _sellerrepository.GetAll().FirstOrDefault(s => s.UserName == sellerDTO.UserName);
 
@@ -63,7 +63,7 @@ namespace Application.Services
 
             sellerDTO.UpdateSeller(SearchSeller);
             var updateSeller = _sellerrepository.update(SearchSeller);
-            return SellerDTO.FromSeller(updateSeller);
+            return CreateSellerDTO.FromSeller(updateSeller);
         }
         public void Delete(string userName)
         {

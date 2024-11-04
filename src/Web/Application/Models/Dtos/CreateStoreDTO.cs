@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Models.Dtos
 {
-    public class StoreDTO
+    public class CreateStoreDTO
     {
         public string Name { get; set; }
         public string Description { get; set; }
@@ -15,9 +15,9 @@ namespace Application.Models.Dtos
         public string City { get; set; }
         public bool Active { get; set; }
 
-        public static StoreDTO FromStore(Store store)
+        public static CreateStoreDTO FromStore(Store store)
         {
-            return new StoreDTO
+            return new CreateStoreDTO
             {
                 Name = store.Name,
                 Description = store.Description,

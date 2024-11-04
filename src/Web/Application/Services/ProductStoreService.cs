@@ -40,9 +40,14 @@ namespace Application.Services
 
         public int GetProductQuantityInStore(int productId, int storeId)
         {
-            return _productStoreRepository
-                .FindByCondition(ps => ps.ProductId == productId && ps.StoreId == storeId)
-                .Quantity;
+            var productStore = _productStoreRepository.FindByCondition(ps => ps.ProductId == productId && ps.StoreId == storeId);
+
+            if (productStore == null)
+            {
+                throw new InvalidOperationException($"No se encontró la cantidad para el producto ID {productId} en la tienda ID {storeId}.");
+            }
+
+            return productStore.Quantity;
         }
 
         public void UpdateProductInStore(int productId, int currentStoreId, int? newStoreId, int newQuantity)

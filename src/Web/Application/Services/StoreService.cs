@@ -24,25 +24,34 @@ namespace Application.Services
             _productStoreRepository = productStoreRepository;
         }
 
-        public List<StoreDTO> GetAll()
+        public List<CreateStoreDTO> GetAll()
         {
             return _storeRepository.GetAll()
-                .Select(store => StoreDTO.FromStore(store))
+                .Select(store => CreateStoreDTO.FromStore(store))
                 .ToList();
         }
 
-        public StoreDTO GetById(int id)
+        public CreateStoreDTO GetById(int id)
         {
             var store = _storeRepository.FindByCondition(s => s.Id == id);
             if (store == null) return null;
-            return StoreDTO.FromStore(store);
+            return CreateStoreDTO.FromStore(store);
         }
 
-        public StoreDTO Create(StoreDTO storeDto)
+        public CreateStoreDTO Create(CreateStoreDTO storeDto)
         {
             var store = storeDto.ToStore();
             var addedStore = _storeRepository.add(store);
-            return StoreDTO.FromStore(addedStore);
+            return CreateStoreDTO.FromStore(addedStore);
+        }
+        public void Update( CreateStoreDTO storeDto)
+        {
+            var store = _storeRepository.FindByCondition(s => s.Name == storeDto.Name);
+            if (store != null)
+            {
+                storeDto.UpdateStore(store);
+                _storeRepository.update(store);
+            }
         }
 
         public void DesactivateStoreByName(string name)
@@ -54,15 +63,5 @@ namespace Application.Services
                 _storeRepository.update(store);
             }
         }
-        public void UpdateStoreByName(string name, StoreDTO storeDto)
-        {
-            var store = _storeRepository.FindByCondition(s => s.Name == name);
-            if (store != null)
-            {
-                storeDto.UpdateStore(store);
-                _storeRepository.update(store);
-            }
-        }
-
     }
 }

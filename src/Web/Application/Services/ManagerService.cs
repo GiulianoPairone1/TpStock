@@ -18,10 +18,10 @@ namespace Application.Services
             _managerRepository = managerRepository;
         }
 
-        public List<ManagerDTO> GetAll()
+        public List<CreateManagerDTO> GetAll()
         {
             return _managerRepository.GetAll()
-                .Select(manager => new ManagerDTO
+                .Select(manager => new CreateManagerDTO
                 {
                     Name = manager.Name,
                     UserName = manager.UserName,
@@ -29,7 +29,7 @@ namespace Application.Services
                 }).ToList();
         }
 
-        public ManagerDTO GetByName(string name)
+        public CreateManagerDTO GetByName(string name)
         {
             var manager = _managerRepository.FindByCondition(p => p.Name == name && p.Active);
 
@@ -38,7 +38,7 @@ namespace Application.Services
                 return null;
             }
 
-            return new ManagerDTO
+            return new CreateManagerDTO
             {
                 Name = manager.Name,
                 UserName = manager.UserName,
@@ -46,14 +46,14 @@ namespace Application.Services
             };
         }
 
-        public ManagerDTO Create(ManagerDTO managerdto)
+        public CreateManagerDTO Create(CreateManagerDTO managerdto)
         {
             var manager = managerdto.ToManager();
             var addmanager=_managerRepository.add(manager);
-            return ManagerDTO.FromManager(addmanager);
+            return CreateManagerDTO.FromManager(addmanager);
         }
 
-        public ManagerDTO Update(ManagerDTO managerdto)
+        public CreateManagerDTO Update(CreateManagerDTO managerdto)
         {
             var SearchManagaer = _managerRepository.GetAll().FirstOrDefault(s => s.UserName == managerdto.UserName);
             if (SearchManagaer == null)
@@ -62,7 +62,7 @@ namespace Application.Services
             }
             managerdto.UpdateManager(SearchManagaer);
             var uddateManager = _managerRepository.update(SearchManagaer);
-            return ManagerDTO.FromManager(uddateManager);
+            return CreateManagerDTO.FromManager(uddateManager);
         }
 
         public void Delete(string userName)

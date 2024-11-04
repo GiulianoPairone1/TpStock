@@ -17,10 +17,10 @@ namespace Application.Services
             _stockManagerRepository = stockManagerRepository;
         }
 
-        public List<StockManagerDTO> GetAll()
+        public List<CreateStockManagerDTO> GetAll()
         {
             return _stockManagerRepository.GetAll()
-                .Select(stockManager => new StockManagerDTO
+                .Select(stockManager => new CreateStockManagerDTO
                 {
                     Name = stockManager.Name,
                     UserName = stockManager.UserName,
@@ -28,7 +28,7 @@ namespace Application.Services
                 }).ToList();
         }
 
-        public StockManagerDTO GetByName(string name)
+        public CreateStockManagerDTO GetByName(string name)
         {
             var stockmanager = _stockManagerRepository.FindByCondition(p => p.Name == name && p.Active);
 
@@ -37,7 +37,7 @@ namespace Application.Services
                 return null;
             }
 
-            return new StockManagerDTO
+            return new CreateStockManagerDTO
             {
                 Name = stockmanager.Name,
                 UserName = stockmanager.UserName,
@@ -45,14 +45,14 @@ namespace Application.Services
             };
         }
 
-        public StockManagerDTO Create(StockManagerDTO stockmanagerdto)
+        public CreateStockManagerDTO Create(CreateStockManagerDTO stockmanagerdto)
         {
             var stockmanager = stockmanagerdto.ToManagerStock();
             var addstockmanager = _stockManagerRepository.add(stockmanager);
-            return StockManagerDTO.FromStockManager(addstockmanager);
+            return CreateStockManagerDTO.FromStockManager(addstockmanager);
         }
 
-        public StockManagerDTO Update(StockManagerDTO stockmanagerdto)
+        public CreateStockManagerDTO Update(CreateStockManagerDTO stockmanagerdto)
         {
             var SearchstockManager = _stockManagerRepository.GetAll().FirstOrDefault(s => s.UserName == stockmanagerdto.UserName);
 
@@ -63,7 +63,7 @@ namespace Application.Services
 
             stockmanagerdto.UpdateStockManager(SearchstockManager);
             var stockManager = _stockManagerRepository.update(SearchstockManager);
-            return StockManagerDTO.FromStockManager(stockManager);
+            return CreateStockManagerDTO.FromStockManager(stockManager);
         }
 
         public void Delete(string userName)

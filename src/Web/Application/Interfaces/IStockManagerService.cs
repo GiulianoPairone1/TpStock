@@ -9,10 +9,10 @@ namespace Application.Interfaces
 {
     public interface IStockManagerService
     {
-        List<StockManagerDTO> GetAll();
-        StockManagerDTO GetByName(string name);
-        StockManagerDTO Create(StockManagerDTO stockmanagerdto);
-        StockManagerDTO Update(StockManagerDTO stockmanagerdto);
+        List<CreateStockManagerDTO> GetAll();
+        CreateStockManagerDTO GetByName(string name);
+        CreateStockManagerDTO Create(CreateStockManagerDTO stockmanagerdto);
+        CreateStockManagerDTO Update(CreateStockManagerDTO stockmanagerdto);
         void Delete(string userName);
     }
 }

@@ -25,7 +25,7 @@ namespace Web.Controllers
             return Ok(sellers);
         }
 
-        [HttpGet]
+        [HttpGet("Name")]
         public IActionResult GetByName([FromQuery] string name)
         {
             var seller = _sellerService.GetByName(name);
@@ -40,7 +40,7 @@ namespace Web.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Manager")]
-        public IActionResult Add([FromBody]  SellerDTO sellerdto)
+        public IActionResult Add([FromBody]  CreateSellerDTO sellerdto)
         {
             if (!ModelState.IsValid)
             {
@@ -52,7 +52,7 @@ namespace Web.Controllers
 
         [HttpPut]
         [Authorize(Roles = "Manager,Seller")]
-        public IActionResult Update([FromBody] SellerDTO sellerDto)
+        public IActionResult Update([FromBody] CreateSellerDTO sellerDto)
         {
             if (!ModelState.IsValid)
             {
@@ -77,7 +77,7 @@ namespace Web.Controllers
             try
             {
                 _sellerService.Delete(userName);
-                return Ok("Vendedor Eliminado.");
+                return Ok("Vendedor desactivado.");
             }
             catch (Exception ex)
             {

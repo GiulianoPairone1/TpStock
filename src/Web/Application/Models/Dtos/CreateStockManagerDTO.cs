@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Models.Dtos
 {
-    public class StockManagerDTO
+    public class CreateStockManagerDTO
     {
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -39,9 +39,9 @@ namespace Application.Models.Dtos
             stockManager.Password = this.Password;
         }
 
-        public static StockManagerDTO FromStockManager(StockManager stockManager)
+        public static CreateStockManagerDTO FromStockManager(StockManager stockManager)
         {
-            return new StockManagerDTO
+            return new CreateStockManagerDTO
             {
                 Name = stockManager.Name,
                 Surname = stockManager.Surname,

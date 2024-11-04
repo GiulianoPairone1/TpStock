@@ -25,7 +25,7 @@ namespace Web.Controllers
             return Ok(managers);
         }
 
-        [HttpGet]
+        [HttpGet("Name")]
         [Authorize(Roles = "Manager")]
         public IActionResult GetByName([FromQuery] string name)
         {
@@ -41,7 +41,7 @@ namespace Web.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Manager")]
-        public IActionResult Add([FromBody] ManagerDTO managerDTO)
+        public IActionResult Add([FromBody] CreateManagerDTO managerDTO)
         {
             if (!ModelState.IsValid)
             {
@@ -53,7 +53,7 @@ namespace Web.Controllers
 
         [HttpPut]
         [Authorize(Roles = "Manager")]
-        public IActionResult Update([FromBody] ManagerDTO managerDTO)
+        public IActionResult Update([FromBody] CreateManagerDTO managerDTO)
         {
             if (!ModelState.IsValid)
             {

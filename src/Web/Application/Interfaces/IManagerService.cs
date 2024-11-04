@@ -10,10 +10,10 @@ namespace Application.Interfaces
 {
     public interface IManagerService
     {
-        List<ManagerDTO> GetAll();
-        ManagerDTO GetByName(string name);
-        ManagerDTO Create(ManagerDTO managerdto);
-        ManagerDTO Update(ManagerDTO managerdto);
+        List<CreateManagerDTO> GetAll();
+        CreateManagerDTO GetByName(string name);
+        CreateManagerDTO Create(CreateManagerDTO managerdto);
+        CreateManagerDTO Update(CreateManagerDTO managerdto);
         void Delete(string userName);
     }
 }

@@ -18,7 +18,7 @@ namespace Web.Controllers
         }
 
 
-        [HttpGet()]
+        [HttpGet("{storeId}/products/{productId}/quantity")]
         public IActionResult GetProductQuantityInStore(int storeId, int productId)
         {
             try
@@ -32,7 +32,7 @@ namespace Web.Controllers
             }
         }
 
-        [HttpPost()]
+        [HttpPost("{storeId}/products/{productId}/add")]
         [Authorize(Roles = "Manager,StockManager")]
         public IActionResult AddProductToStore(int storeId, int productId, [FromQuery] int quantity)
         {

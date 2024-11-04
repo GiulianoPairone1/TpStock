@@ -26,7 +26,7 @@ namespace Web.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("Name")]
         [Authorize(Roles = "Manager")]
         public IActionResult GetByName([FromQuery] string name)
         {
@@ -34,7 +34,7 @@ namespace Web.Controllers
 
             if (stockmanager == null)
             {
-                return NotFound("No se encontro al gerente");
+                return NotFound("No se encontro al Encargado de stock");
             }
 
             return Ok(stockmanager);
@@ -43,7 +43,7 @@ namespace Web.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Manager")]
-        public IActionResult Add([FromBody] StockManagerDTO stockManagerDTO)
+        public IActionResult Add([FromBody] CreateStockManagerDTO stockManagerDTO)
         {
             if (!ModelState.IsValid)
             {
@@ -56,7 +56,7 @@ namespace Web.Controllers
 
         [HttpPut]
         [Authorize(Roles = "Manager,StockManager")]
-        public IActionResult Update([FromBody] StockManagerDTO stockManagerDTO)
+        public IActionResult Update([FromBody] CreateStockManagerDTO stockManagerDTO)
         {
             if (!ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace Web.Controllers
             try
             {
                 _stockManagerService.Delete(userName);
-                return Ok("Encargado de Stock Eliminado.");
+                return Ok("Encargado de Stock desactivado.");
             }
             catch (Exception ex)
             {

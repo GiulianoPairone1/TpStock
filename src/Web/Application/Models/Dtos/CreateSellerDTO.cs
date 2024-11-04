@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Application.Models.Dtos
 {
-    public class SellerDTO
+    public class CreateSellerDTO
     {
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -39,9 +39,9 @@ namespace Application.Models.Dtos
             seller.Active = this.Active;
         }
 
-        public static SellerDTO FromSeller(Seller seller)
+        public static CreateSellerDTO FromSeller(Seller seller)
         {
-            return new SellerDTO
+            return new CreateSellerDTO
             {
                 Name = seller.Name,
                 Surname = seller.Surname,
