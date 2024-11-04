@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9B3973C8-984E-403E-B3E9-D97E9E615C65}|Web\\Web.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\web\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B3973C8-984E-403E-B3E9-D97E9E615C65}|Web\\Web.csproj|solutionrelative:web\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E448EFD0-0EE1-458D-92CF-D56F73F2A886}|Application\\Application.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\application\\services\\productstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E448EFD0-0EE1-458D-92CF-D56F73F2A886}|Application\\Application.csproj|solutionrelative:application\\services\\productstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BFFB7B5-26FF-4143-8EC5-81A18EBE3FB1}|Domain\\Domain.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\domain\\entities\\productstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BFFB7B5-26FF-4143-8EC5-81A18EBE3FB1}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\productstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B3973C8-984E-403E-B3E9-D97E9E615C65}|Web\\Web.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\web\\controllers\\productstorecontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B3973C8-984E-403E-B3E9-D97E9E615C65}|Web\\Web.csproj|solutionrelative:web\\controllers\\productstorecontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E448EFD0-0EE1-458D-92CF-D56F73F2A886}|Application\\Application.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\application\\interfaces\\iproductstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E448EFD0-0EE1-458D-92CF-D56F73F2A886}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iproductstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,27 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductStore.cs",
-              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Domain\\Entities\\ProductStore.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\ProductStore.cs",
-              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Domain\\Entities\\ProductStore.cs",
-              "RelativeToolTip": "Domain\\Entities\\ProductStore.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "IProductStoreService.cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Application\\Interfaces\\IProductStoreService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IProductStoreService.cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Application\\Interfaces\\IProductStoreService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IProductStoreService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T00:12:11.621Z"
+              "WhenOpened": "2024-11-04T05:52:01.956Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Web\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Web\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Web\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Web\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Title": "ProductStoreService.cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Application\\Services\\ProductStoreService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ProductStoreService.cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Application\\Services\\ProductStoreService.cs",
+              "RelativeToolTip": "Application\\Services\\ProductStoreService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCUAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T00:10:12.311Z",
+              "WhenOpened": "2024-11-04T05:54:10.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductStoreController .cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Web\\Controllers\\ProductStoreController .cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\ProductStoreController .cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Web\\Controllers\\ProductStoreController .cs",
+              "RelativeToolTip": "Web\\Controllers\\ProductStoreController .cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA1wCUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T05:33:43.445Z",
               "EditorCaption": ""
             }
           ]

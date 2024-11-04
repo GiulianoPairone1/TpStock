@@ -12,7 +12,7 @@ namespace Application.Interfaces
         List<StoreDTO> GetAll();
         StoreDTO GetById(int id);
         StoreDTO Create(StoreDTO storeDto);
-        void AddProductToStore(int productId, int storeId, int quantity);
-        int GetProductQuantityInStore(int productId, int storeId);
+        void UpdateStoreByName(string name, StoreDTO storeDto);
+        void DesactivateStoreByName(string name);
     }
 }

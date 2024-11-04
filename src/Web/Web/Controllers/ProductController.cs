@@ -32,7 +32,7 @@ namespace Web.Controllers
             return Ok(products);
         }
 
-        [HttpGet("GetByName")]
+        [HttpGet]
         public IActionResult GetByName([FromQuery] string name)
         {
             var product = _productService.GetByName(name);
@@ -45,7 +45,7 @@ namespace Web.Controllers
             return Ok(product);
         }
 
-        [HttpGet("GetAllByBrand")]
+        [HttpGet("GetByBrand")]
         public IActionResult GetAllByBrand([FromQuery] string brand)
         {
             var products = _productService.GetAllByBrand(brand);

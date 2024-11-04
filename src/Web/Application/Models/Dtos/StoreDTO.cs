@@ -13,6 +13,7 @@ namespace Application.Models.Dtos
         public string Description { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
+        public bool Active { get; set; }
 
         public static StoreDTO FromStore(Store store)
         {
@@ -21,7 +22,8 @@ namespace Application.Models.Dtos
                 Name = store.Name,
                 Description = store.Description,
                 Address = store.Address,
-                City = store.City
+                City = store.City,
+                Active=store.Active,
             };
         }
 

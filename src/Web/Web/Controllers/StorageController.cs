@@ -43,25 +43,27 @@ namespace Web.Controllers
             return Ok(addedStore);
         }
 
-        [HttpPost("{storeId}/products/{productId}/add")]
+        [HttpPut("Update/{name}")]
         [Authorize(Roles = "Manager,StockManager")]
-        public IActionResult AddProductToStore(int storeId, int productId, [FromQuery] int quantity)
+        public IActionResult UpdateByName(string name, [FromBody] StoreDTO storeDto)
         {
-            if (quantity <= 0)
+            if (!ModelState.IsValid)
             {
-                return BadRequest("La cantidad debe ser mayor a cero.");
+                return BadRequest(ModelState);
             }
 
-            _storeService.AddProductToStore(productId, storeId, quantity);
-            return Ok("Producto agregado al almacén con éxito.");
+            _storeService.UpdateStoreByName(name, storeDto);
+            return Ok($"Almacén '{name}' actualizado con éxito.");
         }
 
-        [HttpGet("{storeId}/products/{productId}/quantity")]
-        public IActionResult GetProductQuantityInStore(int storeId, int productId)
+        [HttpDelete("Desactive/{name}")]
+        [Authorize(Roles = "Manager")]
+        public IActionResult DesactivateByName(string name)
         {
-            var quantity = _storeService.GetProductQuantityInStore(productId, storeId);
-            return Ok(new { ProductId = productId, StoreId = storeId, Quantity = quantity });
+            _storeService.DesactivateStoreByName(name);
+            return Ok($"Almacén '{name}' desactivado con éxito.");
+
+
         }
     }
-
 }

@@ -52,6 +52,7 @@ builder.Services.AddScoped<ISellerRepository, SellerRepository>();
 builder.Services.AddScoped<IManagerRepository, ManagerRepository>();
 builder.Services.AddScoped<IStockManagerRepository, StockManagerRepository>();
 builder.Services.AddScoped<IStoreRepository, StoreRepository>();
+builder.Services.AddScoped<IProductStoreRepository, ProductStoreRepository>();
 #endregion
 
 #region Services
@@ -65,7 +66,7 @@ builder.Services.AddScoped<ISellerService, SellerService>();
 builder.Services.AddScoped<IManagerService, ManagerService>();
 builder.Services.AddScoped<IStockManagerService, StockManagerService>();
 builder.Services.AddScoped<IStoreService, StoreService>();
-builder.Services.AddScoped<IProductStoreRepository, ProductStoreRepository>();
+builder.Services.AddScoped<IProductStoreService, ProductStoreService>();
 #endregion
 
 

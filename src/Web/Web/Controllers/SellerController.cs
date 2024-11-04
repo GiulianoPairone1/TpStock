@@ -25,8 +25,7 @@ namespace Web.Controllers
             return Ok(sellers);
         }
 
-
-        [HttpGet("GetByName")]
+        [HttpGet]
         public IActionResult GetByName([FromQuery] string name)
         {
             var seller = _sellerService.GetByName(name);

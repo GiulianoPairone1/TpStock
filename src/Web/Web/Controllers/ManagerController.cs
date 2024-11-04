@@ -18,13 +18,15 @@ namespace Web.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Manager")]
         public IActionResult Get()
         {
             var managers = _managerservice.GetAll();
             return Ok(managers);
         }
 
-        [HttpGet("GetByName")]
+        [HttpGet]
+        [Authorize(Roles = "Manager")]
         public IActionResult GetByName([FromQuery] string name)
         {
             var manager = _managerservice.GetByName(name);

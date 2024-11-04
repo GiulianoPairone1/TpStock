@@ -190,6 +190,84 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web.Controllers.ProductStoreController",
+    "Method": "GetProductQuantityInStore",
+    "RelativePath": "api/ProductStore",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "storeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ProductStoreController",
+    "Method": "AddProductToStore",
+    "RelativePath": "api/ProductStore",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "storeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "quantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ProductStoreController",
+    "Method": "UpdateProductInStore",
+    "RelativePath": "api/ProductStore/UpdateProductInStore",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "currentStoreId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "newStoreId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "newQuantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web.Controllers.SellerController",
     "Method": "Get",
     "RelativePath": "api/Seller",
@@ -365,46 +443,36 @@
   },
   {
     "ContainingType": "Web.Controllers.StoreController",
-    "Method": "AddProductToStore",
-    "RelativePath": "api/Store/{storeId}/products/{productId}/add",
-    "HttpMethod": "POST",
+    "Method": "DeactivateByName",
+    "RelativePath": "api/Store/DeactivateByName/{name}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "storeId",
-        "Type": "System.Int32",
+        "Name": "name",
+        "Type": "System.String",
         "IsRequired": true
-      },
-      {
-        "Name": "productId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "quantity",
-        "Type": "System.Int32",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "Web.Controllers.StoreController",
-    "Method": "GetProductQuantityInStore",
-    "RelativePath": "api/Store/{storeId}/products/{productId}/quantity",
-    "HttpMethod": "GET",
+    "Method": "UpdateByName",
+    "RelativePath": "api/Store/Update/{name}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "storeId",
-        "Type": "System.Int32",
+        "Name": "name",
+        "Type": "System.String",
         "IsRequired": true
       },
       {
-        "Name": "productId",
-        "Type": "System.Int32",
+        "Name": "storeDto",
+        "Type": "Application.Models.Dtos.StoreDTO",
         "IsRequired": true
       }
     ],

@@ -21,6 +21,8 @@ namespace Domain.Entities
         [Required]
         public string City { get; set; }
         public ICollection<ProductStore> ProductStores { get; set; }
+        [Required]
+        public bool Active { get; set; } = true;
 
         public Store()
         {

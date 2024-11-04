@@ -26,7 +26,7 @@ namespace Web.Controllers
         }
 
 
-        [HttpGet("GetByName")]
+        [HttpGet]
         [Authorize(Roles = "Manager")]
         public IActionResult GetByName([FromQuery] string name)
         {
@@ -40,6 +40,7 @@ namespace Web.Controllers
             return Ok(stockmanager);
         }
 
+
         [HttpPost]
         [Authorize(Roles = "Manager")]
         public IActionResult Add([FromBody] StockManagerDTO stockManagerDTO)
@@ -51,6 +52,7 @@ namespace Web.Controllers
             var addedstockmanager = _stockManagerService.Create(stockManagerDTO);
             return Ok(addedstockmanager);
         }
+
 
         [HttpPut]
         [Authorize(Roles = "Manager,StockManager")]
@@ -71,6 +73,7 @@ namespace Web.Controllers
                 return NotFound(new { message = ex.Message });
             }
         }
+
 
         [HttpDelete("{userName}")]
         [Authorize(Roles = "Manager")]

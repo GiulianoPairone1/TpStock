@@ -45,29 +45,24 @@ namespace Application.Services
             return StoreDTO.FromStore(addedStore);
         }
 
-
-        public void AddProductToStore(int productId, int storeId, int quantity)
+        public void DesactivateStoreByName(string name)
         {
-            var store = _storeRepository.FindByCondition(s => s.Id == storeId);
-            var product = _productRepository.FindByCondition(p => p.Id == productId);
-
-            if (store == null || product == null) return;
-
-            var productStore = new ProductStore
+            var store = _storeRepository.FindByCondition(s => s.Name == name);
+            if (store != null && store.Active)
             {
-                ProductId = productId,
-                StoreId = storeId,
-                Quantity = quantity
-            };
-
-            _productStoreRepository.add(productStore);
+                store.Active = false;
+                _storeRepository.update(store);
+            }
         }
-
-        public int GetProductQuantityInStore(int productId, int storeId)
+        public void UpdateStoreByName(string name, StoreDTO storeDto)
         {
-            return _productStoreRepository
-                .FindByCondition(ps => ps.ProductId == productId && ps.StoreId == storeId)
-                .Quantity;
+            var store = _storeRepository.FindByCondition(s => s.Name == name);
+            if (store != null)
+            {
+                storeDto.UpdateStore(store);
+                _storeRepository.update(store);
+            }
         }
+
     }
 }
