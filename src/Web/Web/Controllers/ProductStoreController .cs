@@ -50,6 +50,10 @@ namespace Web.Controllers
             {
                 return BadRequest(ex.Message);
             }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Error interno del servidor");
+            }
         }
 
         [HttpPut("UpdateProductInStore")]

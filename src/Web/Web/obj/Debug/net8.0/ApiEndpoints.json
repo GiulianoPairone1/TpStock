@@ -119,7 +119,7 @@
     "Parameters": [
       {
         "Name": "productDto",
-        "Type": "Application.Models.Dtos.CreateProductDTO",
+        "Type": "Application.Models.Dtos.ProductDTO",
         "IsRequired": true
       }
     ],
@@ -135,7 +135,7 @@
     "Parameters": [
       {
         "Name": "productDto",
-        "Type": "Application.Models.Dtos.CreateProductDTO",
+        "Type": "Application.Models.Dtos.ProductDTO",
         "IsRequired": true
       }
     ],
@@ -435,7 +435,7 @@
     "Parameters": [
       {
         "Name": "storeDto",
-        "Type": "Application.Models.Dtos.CreateStoreDTO",
+        "Type": "Application.Models.Dtos.StoreDTO",
         "IsRequired": true
       }
     ],
@@ -467,7 +467,7 @@
     "Parameters": [
       {
         "Name": "storeDto",
-        "Type": "Application.Models.Dtos.CreateStoreDTO",
+        "Type": "Application.Models.Dtos.StoreDTO",
         "IsRequired": true
       }
     ],

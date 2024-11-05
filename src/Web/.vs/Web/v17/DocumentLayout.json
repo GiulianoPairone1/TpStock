@@ -1,7 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\infrastructure\\data\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\infrastructure\\data\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\infrastructure\\data\\storerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\storerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\infrastructure\\data\\sellerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\sellerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\infrastructure\\data\\productstorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C293AE-888D-41AD-9E1B-EC4B9A3ADF5B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\productstorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E448EFD0-0EE1-458D-92CF-D56F73F2A886}|Application\\Application.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\application\\services\\productstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E448EFD0-0EE1-458D-92CF-D56F73F2A886}|Application\\Application.csproj|solutionrelative:application\\services\\productstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B3973C8-984E-403E-B3E9-D97E9E615C65}|Web\\Web.csproj|c:\\users\\giuliano\\desktop\\utnpractica\\tpstock\\src\\web\\web\\controllers\\productstorecontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B3973C8-984E-403E-B3E9-D97E9E615C65}|Web\\Web.csproj|solutionrelative:web\\controllers\\productstorecontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +47,91 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RepositoryBase.cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Infrastructure\\Data\\RepositoryBase.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\RepositoryBase.cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Infrastructure\\Data\\RepositoryBase.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\RepositoryBase.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T01:46:01.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SellerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Infrastructure\\Data\\SellerRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\SellerRepository.cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Infrastructure\\Data\\SellerRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\SellerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T01:00:43.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductStoreService.cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Application\\Services\\ProductStoreService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ProductStoreService.cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Application\\Services\\ProductStoreService.cs",
+              "RelativeToolTip": "Application\\Services\\ProductStoreService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T00:59:44.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Infrastructure\\Data\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Infrastructure\\Data\\ProductRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\ProductRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAxwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T00:56:58.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductStoreController .cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Web\\Controllers\\ProductStoreController .cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\ProductStoreController .cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Web\\Controllers\\ProductStoreController .cs",
+              "RelativeToolTip": "Web\\Controllers\\ProductStoreController .cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T00:54:40.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductStoreRepository.cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Infrastructure\\Data\\ProductStoreRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\ProductStoreRepository.cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Infrastructure\\Data\\ProductStoreRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\ProductStoreRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T00:53:19.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StoreRepository.cs",
+              "DocumentMoniker": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Infrastructure\\Data\\StoreRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\StoreRepository.cs",
+              "ToolTip": "C:\\Users\\giuliano\\Desktop\\UtnPractica\\TpStock\\src\\Web\\Infrastructure\\Data\\StoreRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\StoreRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T00:53:15.744Z"
             }
           ]
         }

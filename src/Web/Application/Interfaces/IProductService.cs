@@ -15,8 +15,8 @@ namespace Application.Interfaces
 
         List<ProductDTO> GetAllByBrand(string brand);
 
-        CreateProductDTO Create(CreateProductDTO productDto);
-        void Update(CreateProductDTO productDto);
+        ProductDTO Create(ProductDTO productDto);
+        void Update(ProductDTO productDto);
 
         void Delete(string productName);
     }

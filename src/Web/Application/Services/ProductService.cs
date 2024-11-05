@@ -59,14 +59,14 @@ namespace Application.Services
 
             return products.Select(ProductDTO.FromProduct).ToList();
         }
-        public CreateProductDTO Create(CreateProductDTO productDto)
+        public ProductDTO Create(ProductDTO productDto)
         {
             var product = productDto.ToProduct();
             var addedProduct = _productRepository.add(product);
-            return CreateProductDTO.FromProduct(addedProduct);
+            return ProductDTO.FromProduct(addedProduct);
         }
 
-        public void Update(CreateProductDTO productDto)
+        public void Update(ProductDTO productDto)
         {
             var product = _productRepository.FindByCondition(p => p.Name == productDto.Name);
             if (product != null)

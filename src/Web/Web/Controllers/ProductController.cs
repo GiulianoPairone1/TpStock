@@ -35,11 +35,16 @@ namespace Web.Controllers
         [HttpGet("GetByName")]
         public IActionResult GetByName([FromQuery] string name)
         {
+            if (string.IsNullOrEmpty(name))
+            {
+                return BadRequest("El nombre del producto no puede estar vacío.");
+            }
+
             var product = _productService.GetByName(name);
 
             if (product == null)
             {
-                return NotFound("No se encontró el producto");
+                return NotFound("No se encontró el producto.");
             }
 
             return Ok(product);
@@ -60,7 +65,7 @@ namespace Web.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Manager,StockManager")]
-        public IActionResult Add([FromBody] CreateProductDTO productDto)
+        public IActionResult Add([FromBody] ProductDTO productDto)
         {
             if (!ModelState.IsValid)
             {
@@ -73,7 +78,7 @@ namespace Web.Controllers
 
         [HttpPut]
         [Authorize(Roles = "Manager,StockManager")]
-        public IActionResult Update([FromBody] CreateProductDTO productDto)
+        public IActionResult Update([FromBody] ProductDTO productDto)
         {
             if (!ModelState.IsValid)
             {

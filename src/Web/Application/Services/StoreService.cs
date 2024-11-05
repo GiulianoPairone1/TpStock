@@ -24,27 +24,27 @@ namespace Application.Services
             _productStoreRepository = productStoreRepository;
         }
 
-        public List<CreateStoreDTO> GetAll()
+        public List<StoreDTO> GetAll()
         {
             return _storeRepository.GetAll()
-                .Select(store => CreateStoreDTO.FromStore(store))
+                .Select(store => StoreDTO.FromStore(store))
                 .ToList();
         }
 
-        public CreateStoreDTO GetById(int id)
+        public StoreDTO GetById(int id)
         {
             var store = _storeRepository.FindByCondition(s => s.Id == id);
             if (store == null) return null;
-            return CreateStoreDTO.FromStore(store);
+            return StoreDTO.FromStore(store);
         }
 
-        public CreateStoreDTO Create(CreateStoreDTO storeDto)
+        public StoreDTO Create(StoreDTO storeDto)
         {
             var store = storeDto.ToStore();
             var addedStore = _storeRepository.add(store);
-            return CreateStoreDTO.FromStore(addedStore);
+            return StoreDTO.FromStore(addedStore);
         }
-        public void Update( CreateStoreDTO storeDto)
+        public void Update( StoreDTO storeDto)
         {
             var store = _storeRepository.FindByCondition(s => s.Name == storeDto.Name);
             if (store != null)

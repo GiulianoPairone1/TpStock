@@ -33,7 +33,7 @@ namespace Web.Controllers
 
         [HttpPost("Name")]
         [Authorize(Roles = "Manager")]
-        public IActionResult Add([FromBody] CreateStoreDTO storeDto)
+        public IActionResult Add([FromBody] StoreDTO storeDto)
         {
             if (!ModelState.IsValid)
             {
@@ -46,7 +46,7 @@ namespace Web.Controllers
 
         [HttpPut]
         [Authorize(Roles = "Manager,StockManager")]
-        public IActionResult UpdateByName([FromBody] CreateStoreDTO storeDto)
+        public IActionResult UpdateByName([FromBody] StoreDTO storeDto)
         {
             if (!ModelState.IsValid)
             {
